@@ -1,0 +1,296 @@
+.nav{
+  position: sticky;
+  top: 0;
+  z-index: 100; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #6256CA;
+  height: 50px;
+}
+.left-nav{
+  flex: 2;
+  margin-left: 10px;
+}
+.right-nav{
+  flex: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-right: 20px;
+}
+.am{
+  flex: 1.5;
+}
+.sk{
+  flex: 1;
+}
+.dm{
+  flex: .5;
+}
+.cm{
+  flex: 1.5;
+}
+.light{
+  background-color: transparent;
+  border: none;
+}
+
+.welcome, .about{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.welcome{
+  height: 100%;
+  padding-top: 16%;
+  padding-bottom: 16%;
+  background-image: url('https://weblium.com/blog/wp-content/uploads/2019/10/photo-1495085461086-ae0ad0a8fd74-1344x734.jpeg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  
+}
+.hello{
+  font-size: 80px;
+}
+.about{
+  background-color:#86D293;
+  padding-bottom: 6%;
+  padding-top: 6%;
+
+}
+.abt{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
+.pfp{
+  margin-right: 3%;
+  transition: transform 0.3s;
+}
+.pfp:hover{
+  transform: scale(1.1);
+}
+.pfp.logo{
+  height: 300px;
+  border: none;
+  border-radius: 150px;
+}
+.about-me{
+  width: 50%;
+  font-size: 24px;
+  opacity: 0;
+  transform: translateX(50%);
+  animation: fade-in 1s ease-in-out forwards;
+  animation-timeline: view();
+  animation-range: entry;
+  animation-delay: 1s;
+}
+@keyframes fade-in{
+  to{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.skills {
+  height: 100%;
+  background-color: #C1E2A4;
+  padding: 5% 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skill-desc {
+  display: grid;
+  column-gap: 30px;
+  row-gap: 30px;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+
+.skill-card {
+  perspective: 800px; 
+  width: 100%;
+  height: 400px;
+  cursor: pointer;
+}
+
+.skill-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.skill-card-flip .skill-card-inner {
+  transform: rotateY(180deg);
+}
+
+.skill-card-front, .skill-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.skill-card-front {
+  background-color: #fff;
+}
+
+.skill-card-back {
+  background-color: #f0f0f0;
+  transform: rotateY(180deg);
+  text-align: center;
+  padding: 10px;
+  color: #333;
+}
+
+.skill-logo {
+  height: 150px;
+}
+
+
+
+.heading{
+  margin: 0;
+  text-align: left;
+  padding-left: 2%;
+  padding-top: 50px;
+  margin-bottom: 20px;
+}
+.contact-me{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FDFAD9;
+  height: 100%;
+  padding-bottom: 20px;
+}
+
+.email{
+  transform: translateX(-25%);
+}
+.num{
+  transform: translateX(25%);
+}
+
+.email,.num{
+  display: block;
+  opacity: 0;
+  animation: fade-in-contact 1s ease-in-out forwards;
+  animation-timeline: view();
+  animation-range: cover;
+  animation-delay: -.5s;
+}
+@keyframes fade-in-contact{
+  to{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.mail{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.name{
+  margin-bottom: 10px;
+  padding: 5px 10px;
+}
+
+.msg{
+  margin-bottom: 10px;
+  padding: 5px 50px 70px 5px;
+}
+.submit-btn{
+  background-color: transparent;
+  padding: 10px 60px;
+}
+
+.image-links{
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo{
+  margin-top: 20px;
+  height: 50px;
+}
+
+.linkedin{
+  margin-right: 10px;
+}
+.github{
+  margin-left: 10px;
+}
+.footer{
+  text-align: center;
+}
+
+.dark-mode-img{
+  height: 30px;
+}
+.dark-mode-about{
+  background-color: #1a351e;
+  color: white;
+}
+
+.dark-mode-nav{
+  background-color: #463e8d;
+  color: white;
+}
+.dark-mode-nav:hover{
+  color: black;
+}
+.dark-mode-skills{
+  background-color: #7a9264;
+  color: white;
+}
+
+.dark-mode-contact-me{
+  background-color: #b1a957;
+  color: white;
+}
+
+.dark-mode-footer{
+  background-color: black;
+  color: white;
+}
+.js-error{
+  color: red;
+}
+
+.hide{
+  opacity: 0;
+  
+}
+
+.skill-card-front-dark, .skill-card-back-dark{
+  color: white;
+  background-color: black;
+}
+
+.skill-details,.hide-skill-details{
+  background-color: transparent;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.skill-details-dark,.hide-skill-details-dark{
+  color: white;
+  border-color: white;
+}

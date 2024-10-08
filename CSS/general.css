@@ -1,0 +1,39 @@
+body{
+  margin: 0;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+a{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  transition: color 0.3s, transform 0.3s;
+}
+a:hover{
+  color:black;
+  font-size: 25px;
+  transform: scale(1.1);
+}
+h1{
+  font-size: 36px;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+p{
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+
+}
+li{
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+html{
+  scroll-behavior: smooth;
+}
